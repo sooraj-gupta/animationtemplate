@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Scrolling</title>
+        <link rel = "stylesheet" href = "scroll/scroll.css">
+        <link id = "theme" rel = "stylesheet" href = "light-theme.css">
+        <script>
+            var dark = false;
+            document.cookie = "theme=light";
+            window.onload = function()
+            {
+                console.log(getTheme());
+            }
+            
+            function getTheme(){
+                var x = document.cookie;
+                var themeIdx = x.indexOf("theme=");
+                var theme = x.substr(themeIdx+6,x.length);
+                if( theme == "light"){
+                    dark = false;
+                }
+                else if( theme == "dark" ){
+                    dark = true;
+                }
+                //console.log(theme);
+                return theme;
+            }
+            function adjustTheme() {
+                dark = !dark;
+                if( dark ){
+                    document.getElementById("theme").setAttribute("href", "dark-theme.css");
+                    document.cookie = "theme=dark";
+                    document.getElementById("themebutton").innerHTML = "Dark Theme: ON"
+                    console.log(getTheme());
+                }
+                else{
+                    document.getElementById("theme").setAttribute("href", "light-theme.css");
+                    document.cookie = "theme=light"
+                    document.getElementById("themebutton").innerHTML = "Dark Theme: OFF"
+                    console.log(getTheme());
+                }
+                //console.log(x);
+            }
+            
+        </script>
+    </head>
+    <body>
+        <div>
+            <center style = "padding: 0; margin: 0;">
+                <div  id = "background" style = " position: fixed;height:100vh; width:100%; background-image: url('https://wallpapercave.com/wp/wp4490728.jpg'); background-size: cover; z-index: 1"></div>
+                <div style = "z-index: 100; position: relative; height:100vh; display: flex; flex-wrap: wrap; justify-content: center; align-items: center;">
+                    <div data-aos = "fade-up">
+                        <div style = "width: 125px" >
+                            <h1>Title</h1>
+                        </div>
+                        <a id = "themebutton"class = "button" onclick="adjustTheme()">Dark Theme: OFF</a>
+                        <br>
+                        <br>
+                        <a class = "button">Button 2</a>
+                        <br>
+                        <br>
+                        <a class = "button">Button 3</a>
+                    </div>
+                </div>
+                <div style = "height: 100vh; background-color: rgba(255,255,255,0);position: relative; z-index: 0"></div>
+                <div style = "z-index:100;  position: relative; padding-top: 100px;">
+                    
+                    <a style = " font-size: 60px;" class = "font">Big Title</a>
+                    <br><br><br><br><br>
+                    <div data-aos = "fade-up" data-aos-duration = "1000" data-aos-offset="200">
+                        <a class = "big font"> Title </a><br>
+                        <br>
+                        <img src = "https://wallpaperaccess.com/full/882.jpg" width = 70% data-aos = "fade-up" data-aos-duration = "1000" data-aos-offset="200" class = "image">
+                    </div>
+                    <p style = "height: 100px; "></p>
+                    <div data-aos = "fade-up" data-aos-duration = "1000" data-aos-offset="200">
+                        <a class = "big font">Title</a><br><br>
+                        <img src = "https://i.pinimg.com/originals/7c/0e/7a/7c0e7a9c13034bd356624c6f0a19fe0b.jpg" width = 70% data-aos = "fade-up" data-aos-duration = "1000" data-aos-offset="200" class = "image">
+                    </div>
+                    <div style = "padding: 100px 0"></div>
+                </div>
+                
+            </center>
+        </div>
+        
+        <script src = "scroll/scroll.js"></script>
+    </body>
+</html>
