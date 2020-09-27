@@ -5,9 +5,15 @@
         <title>Scrolling</title>
         <link rel = "stylesheet" href = "scroll/scroll.css">
         <link id = "theme" rel = "stylesheet" href = "light-theme.css">
+        <meta property="og:title" content="European Travel Destinations">
+<meta property="og:description" content="Offering tour packages for individuals or groups.">
+<meta property="og:image" content="http://euro-travel-example.com/thumbnail.jpg">
+<meta property="og:url" content="http://euro-travel-example.com/index.htm">
+<meta name="twitter:card" content="summary_large_image">
         <script>
             var dark = false;
             document.cookie = "theme=light";
+            
             window.onload = function()
             {
                 console.log(getTheme());
@@ -50,13 +56,11 @@
             <center style = "padding: 0; margin: 0;">
                 <div  id = "background" style = " position: fixed;height:100vh; width:100%; background-image: url('https://wallpapercave.com/wp/wp4490728.jpg'); background-size: cover; z-index: 1"></div>
                 <div style = "z-index: 100; position: relative; height:100vh; display: flex; flex-wrap: wrap; justify-content: center; align-items: center;">
+                    <a id = "themebutton" class = "button" style = "position: fixed ; right:10px; top:10px; z-index: 10000;" onclick="adjustTheme()">Dark Theme: OFF</a>
                     <div data-aos = "fade-up">
                         <div style = "width: 125px" >
                             <h1>Title</h1>
                         </div>
-                        <a id = "themebutton"class = "button" onclick="adjustTheme()">Dark Theme: OFF</a>
-                        <br>
-                        <br>
                         <a class = "button">Button 2</a>
                         <br>
                         <br>
