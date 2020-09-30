@@ -14,6 +14,8 @@ body,html{
     margin:0;
     padding:0;
     background-color: var(--white);
+    cursor:url('pointer.png'), auto;
+    scroll-behavior: smooth;
 }
 h1{
     height: 50px;
@@ -24,6 +26,54 @@ h1{
     white-space: nowrap;
     animation: blink-cursor 1s step-end infinite, typing 5s steps(5,end) infinite;
 }
+
+
+.topnav {
+    background-color: rgba(255,255,255,0.9);
+    border:none;
+    padding: 0px 0px;
+    position: fixed;
+    overflow: hidden;
+    top:0;
+    left:0;
+    width: 100%;
+    z-index: 1000;   
+}
+
+.topnav a, .topnav img {
+    float: right;
+    color: #999;
+    text-align: center;
+    padding: 20px 20px;
+    margin: 1px;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 300;
+    border:none;
+}
+
+#themebutton
+{
+    width: 25px;
+    height: 25px;
+    border:none;
+}
+#themebutton:hover{
+    cursor: pointer
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    color: var(--black);
+    cursor: pointer;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  color: var(--black);
+}
+
+
 
 div{
     
@@ -61,4 +111,55 @@ div{
 }
 .image{
     border: 5px solid var(--black)
+}
+
+.footer{
+    background-color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px;
+    color:black;
+}
+
+#top{
+    animation: bounce 1s infinite;
+}
+@keyframes bounce{
+    0%{ transform: translate(0, 0);}
+    50%{  transform: translate(0px, 10px);}
+    100%{ transform: translate(0, 0);}
+}
+
+.form{
+    box-shadow: -2px 4px 8px #CCC;
+    width: 80vw;
+    max-width: 350px;
+    padding: 40px 0px;
+    padding-top: 30px;
+}
+.form div label{
+    font-size: 15px;
+}
+
+.form > div {
+    
+}
+input[type=text]{
+    border: none;
+    border-bottom: 1px solid black;
+    font-family: 'Roboto Mono';
+    font-size: 18px;
+    font-weight: 100;
+}
+input:focus{
+    outline: none;
+}
+
+button{
+    border:none;
+    font-family: 'Roboto Mono';
+    font-size: 20px;
+    font-weight: 100;
+    background-color :white;
 }
