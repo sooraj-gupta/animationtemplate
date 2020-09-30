@@ -18,6 +18,7 @@ body,html{
     color: var(--black);
     scroll-behavior: smooth;
     cursor:url('pointerdark.png'), auto;
+    transition:all 0.3s;
 }
 h1{
     height: 80px;
@@ -29,6 +30,7 @@ h1{
     white-space: nowrap;
     animation: blink-cursor 1s step-end infinite, typing 5s steps(5,end) infinite;
     color: var(--white);
+    transition: 1s;
 }
 
 .topnav {
@@ -41,6 +43,7 @@ h1{
     left:0;
     width: 100%;
     z-index: 1000; 
+    transition: 1s;
 }
 
 .topnav a, .topnav img {
@@ -53,17 +56,20 @@ h1{
     font-size: 17px;
     font-weight: 300;
     border:none;
+    transition: 1s;
 }
 
 /* Change the color of links on hover */
 .topnav a:hover {
     color: #fff;
     cursor: pointer;
+    transition: 1s;
 }
 
 /* Add a color to the active/current link */
 .topnav a.active {
   color: #FFF;
+    transition: 1s;
 }
 
 #themebutton
@@ -71,14 +77,17 @@ h1{
     width: 25px;
     height: 25px;
     border:none;
+    transition: 1s;
 }
 #themebutton:hover{
     cursor: pointer
+        transition: 1s;
 }
 
 div{
     
     background-color:var(--black);
+    transition: 1s;
     
 }
 @keyframes blink-cursor{
@@ -112,7 +121,8 @@ div{
     color:var(--white);
 }
 .image{
-    border: 5px solid var(--white)
+    border: 5px solid var(--white);
+    transition: 1s;
 }
 .footer{
     background-color: var(--black);
@@ -121,10 +131,12 @@ div{
     align-items: center;
     padding: 100px;
     color:white;
+    transition: 1s;
 }
 
 #top{
     animation: bounce 1s infinite;
+    transition: 1s;
 }
 @keyframes bounce{
     0%{ transform: translate(0, 0);}
@@ -140,10 +152,11 @@ div{
 }
 .form div label{
     font-size: 15px;
+    transition: 1s;
 }
 
 .form > div {
-    
+    transition: 1s;
 }
 input[type=text]{
     border: none;
@@ -153,10 +166,12 @@ input[type=text]{
     font-weight: 100;
     background-color : var(--black);
     color:white;
+    transition: 1s;
 }
 input:focus{
     outline: none;
     background-color : var(--black);
+    transition: 1s;
 }
 
 button{
@@ -165,8 +180,10 @@ button{
     font-size: 20px;
     font-weight: 100;
     background-color : var(--black);
+    transition: 1s;
 }
 .form h2
 {
     color: white;
+    transition: 1s;
 }
