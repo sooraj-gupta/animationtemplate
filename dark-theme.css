@@ -20,7 +20,8 @@ body,html{
     cursor:url('pointerdark.png'), auto;
 }
 h1{
-    height: 50px;
+    height: 80px;
+    font-size: 60px;
     font-weight: 100;
     overflow: hidden;
     margin: 30px auto;
@@ -134,8 +135,8 @@ div{
     box-shadow: -2px 4px 8px #000;
     width: 80vw;
     max-width: 350px;
-    padding: 80px 0px;
-    padding-top: 60px;
+    padding: 40px 0px;
+    padding-top: 30px;
 }
 .form div label{
     font-size: 15px;
