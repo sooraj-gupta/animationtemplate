@@ -11,72 +11,7 @@
         <meta property="og:image" content="https://wallpapercave.com/wp/wp4490728.jpg">
         <meta property="og:url" content="https://sooraj-gupta.github.io/animationtemplate/index.html">
         <meta name="twitter:card" content="summary_large_image">
-        <script>
-            var dark = false;
-            document.cookie = "theme=light";
-            
-            window.onload = function()
-            {
-                const query = window.location.search;
-                const urlParams = new URLSearchParams(query);
-                const theme = urlParams.get('theme');
-                if( theme == "dark")
-                    dark = true;
-                if( theme == "light")
-                    dark = false;
-                
-                setTheme();
-                console.log(theme);
-            }
-            
-            
-            
-            function getTheme(){
-                var x = document.cookie;
-                var themeIdx = x.indexOf("theme=");
-                var theme = x.substr(themeIdx+6,x.length);
-                if( theme == "light"){
-                    dark = false;
-                }
-                if( theme == "dark" ){
-                    dark = true;
-                }
-                //console.log(theme);
-                return theme;
-            }
-            function adjustTheme(){
-                dark = !dark;
-                setTheme();
-            }
-            function setTheme() {
-                if( dark ){
-                    document.getElementById("theme").setAttribute("href", "dark-theme.css");
-                    document.cookie = "theme=dark";
-                    document.getElementById("themebutton").setAttribute("src", "lightmode.png");
-                    console.log(getTheme());
-                    window.history.replaceState(null, null, "?theme=dark");
-                }
-                else if ( !dark ){
-                    document.getElementById("theme").setAttribute("href", "light-theme.css");
-                    document.cookie = "theme=light"
-                    document.getElementById("themebutton").setAttribute("src", "darkmode.png");
-                    console.log(getTheme());
-                    window.history.replaceState(null, null, "?theme=light");
-                }
-                //console.log(x);
-            }
-            function goTo( target )
-            {
-                if( dark )
-                {
-                    window.location = target + "?theme=dark"
-                }
-                else{
-                    window.location = target + "?theme=light"
-                }
-            }
-            
-        </script>
+        <script src = "main.js"></script>
     </head>
     <body>
         <div>

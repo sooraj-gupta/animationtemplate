@@ -105,7 +105,7 @@ div{
 }
 .button{
     box-shadow: -2px 4px 8px #CCC;
-    padding: 7px;
+    padding: 10px;
     text-decoration: none;
     color: var(--black);
     transition: 0.2s;
@@ -114,6 +114,10 @@ div{
     transition: 0.2s;
     cursor: pointer;
     box-shadow: none;
+}
+.button:active{
+    background-color: black;
+    color:white;
 }
 .big{
     font-size: 40px;
@@ -172,6 +176,14 @@ input[type=text]{
 }
 input:focus{
     outline: none;
+    transition: 1s;
+}
+input[type=submit]{
+    border:none;
+    font-family: 'Roboto Mono';
+    font-size: 20px;
+    font-weight: 100;
+    background-color : var(--white);
     transition: 1s;
 }
 
