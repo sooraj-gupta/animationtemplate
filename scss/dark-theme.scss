@@ -2,7 +2,7 @@
 @import "https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap";
 /* Change the color of links on hover */
 /* Add a color to the active/current link */
-@keyframes "blink-cursor" {
+@keyframes blink-cursor {
 	0% {
 		border-color: var(--black);
 	}
@@ -13,7 +13,7 @@
 		border-color: var(--black);
 	}
 }
-@keyframes "typing" {
+@keyframes typing {
 	0% {
 		width: 0;
 	}
@@ -27,7 +27,7 @@
 		width: 0%;
 	}
 }
-@keyframes "bounce" {
+@keyframes bounce {
 	0% {
 		transform: translate(0, 0);
 	}

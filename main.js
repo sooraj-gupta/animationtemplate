@@ -1,4 +1,5 @@
 var dark = false;
+
 document.cookie = "theme=light";
 
 var thanks = false;
